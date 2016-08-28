@@ -2,20 +2,21 @@ class Raindrops
 	def self.convert(num)
 		str = ""
 		if num % 3 == 0
-			str += "Pling"
+			str << "Pling"
 		end
 
 		if num % 5 == 0
-			str += "Plang"
+			str << "Plang"
 		end
 
 		if num % 7 == 0
-			str += "Plong"
+			str << "Plong"
 		end
 
-		if str != ""
+		if str == ""
+			num.to_s
+		else
 			str
-		else num.to_s
 		end
 	end
 end
