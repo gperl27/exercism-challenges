@@ -51,9 +51,6 @@ class RobotTest < Minitest::Test
     name1 = Robot.new.name
     Kernel.srand SAME_INITIAL_ROBOT_NAME_SEED
     name2 = Robot.new.name
-
-    p name1
-    p name2
     refute_equal name1, name2
   end
 
