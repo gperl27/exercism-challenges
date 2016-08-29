@@ -8,11 +8,7 @@ class Pangram
       end
     }
 
-    if count >= 26
-      true
-    else
-      false
-    end
+    count >= 26
   end
 end
 
