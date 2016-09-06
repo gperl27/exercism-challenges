@@ -12,4 +12,4 @@ Feel free to comment on or contribute to my solutions. If you'd like to get in t
 
 |Language|Progress|
 |--------|--------|
-|Ruby    |18/80   |
+|Ruby    |19/80   |
