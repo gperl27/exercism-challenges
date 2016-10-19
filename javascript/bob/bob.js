@@ -6,8 +6,6 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  var last = input[input.length-1];
-
   if(isSilent(input)){
     return "Fine. Be that way!";
   } else if (checkUpperCase(input) && checkNumbers(input)) {
