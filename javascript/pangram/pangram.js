@@ -1,19 +1,19 @@
 var Pangram = function(phrase) {
   this.phrase = phrase;
+  this.alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 };
 
 Pangram.prototype.isPangram = function() {
   var phrase = this.phrase.toLowerCase();
-  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
-  var count = 0;
-  alphabet.forEach(function(letter){
+  var letterCount = 0;
+  this.alphabet.forEach(function(letter){
     if (phrase.match(letter) !== null){
-      count++;
+      letterCount++;
     }
   });
 
-  return (count >= 26);
+  return (letterCount >= 26);
 
 }
 
