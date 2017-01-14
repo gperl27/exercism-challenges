@@ -13,4 +13,4 @@ Feel free to comment on or contribute to my solutions. If you'd like to get in t
 |Language|Progress|
 |--------|--------|
 |Ruby    |29/80   |
-|JavaScript|22/68  |
+|JavaScript|23/68  |
