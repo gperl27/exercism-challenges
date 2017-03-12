@@ -2,7 +2,7 @@
 
 ## About
 
-I will be documenting my progress through exercism.io's programming challenges. 
+I will be documenting my progress through exercism.io's programming challenges.
 
 My plan is to complete the Ruby section and follow-up with JavaScript. Other languages are TBD. Below, there is an updated progress on where I am at in the challenges.
 
@@ -13,4 +13,4 @@ Feel free to comment on or contribute to my solutions. If you'd like to get in t
 |Language|Progress|
 |--------|--------|
 |Ruby    |29/80   |
-|JavaScript|30/68  |
+|JavaScript|31/68  |
