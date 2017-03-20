@@ -13,7 +13,7 @@ Sieve.prototype.getPrimes = function(num){
   }
 
   // push the first index of numList, then filter out multiples
-  // set start equal to the newly filtered list
+  // set start equal to the first element of the newly filtered list
   // do this until we hit our max number
   while(start <= num){
     primes.push(start);
