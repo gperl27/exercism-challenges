@@ -14,7 +14,7 @@ Hexadecimal.prototype.toDecimal = function(){
       binaryArr[i] *= Math.pow(base, i);
     } else if(parseInt(binaryArr[i]) >= 0 && parseInt(binaryArr[i]) <= 9){
       binaryArr[i] *= Math.pow(base, i);
-    } else{
+    } else {
       return 0;
     }
   }
