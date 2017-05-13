@@ -86,7 +86,7 @@ describe('BinarySearchTree', function() {
     expect(recordAllData(four)).toEqual([4, 5]);
   });
 
-  xit('iterating over complex tree', function() {
+  it('iterating over complex tree', function() {
     var four;
 
     four = new Bst(4);
