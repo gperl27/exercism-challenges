@@ -15,14 +15,13 @@ defmodule SecretHandshake do
   """
   @spec commands(code :: integer) :: list(String.t())
   def commands(code) do
-    intToBinary code
+    code 
+    |> map_code_to_commands
+    |> handle_reversal
   end
 
-  def intToBinary code do
-    
-    # {numToBinary, _} = code |> Integer.to_string(2) |> Integer.parse
-
-    {_, handshake} = Enum.reduce([
+  defp map_code_to_commands code do
+    Enum.reduce([
       {16, "reverse"},
       {8, "jump"},
       {4, "close your eyes"},
@@ -30,20 +29,21 @@ defmodule SecretHandshake do
       {1, "wink"}
     ], {code, []}, 
       fn {binary, action}, {code, commands} ->
-        setBits = rem(code, binary)
+        bits = rem(code, binary)
         
         cond do
           binary > code -> {code, commands}
-          setBits >= 0 -> {setBits, [action | commands]}
+          bits >= 0 -> {bits, [action | commands]}
           true -> {0 , commands}
         end
       end
     )
+  end
 
-    findReverse = fn x -> x == "reverse" end
 
-    IO.inspect(Enum.any? handshake, findReverse)
-
+  defp handle_reversal {_, handshake} do
+    findReverse = &(&1 == "reverse")
+    
     cond do
       Enum.any? handshake, findReverse -> Enum.reject(handshake, findReverse) |> Enum.reverse
       true -> handshake
