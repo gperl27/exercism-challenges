@@ -12,15 +12,15 @@ defmodule RotationalCipher do
   def rotate(text, shift) do
     text
     |> String.codepoints
-    |> Enum.map(
-      fn letter ->
-        cond do
-          String.match?(letter, ~r/([A-Za-z])/) -> handle_rotation {letter, shift}
-          true -> letter
-        end
-      end
-    )
+    |> Enum.map(map_letter)
     |> Enum.join
+  end
+
+  defp map_letter letter do
+    cond do
+      String.match?(letter, ~r/([A-Za-z])/) -> handle_rotation {letter, shift}
+      true -> letter
+    end
   end
 
   defp handle_rotation {letter, shift} do
